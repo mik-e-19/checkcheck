@@ -1,0 +1,5 @@
+Credentials cache: API:FF716E53-152A-46BF-B5DB-9BCD0D2DC768
+        Principal: mloh@42KL.EDU.MY
+
+  Issued                Expires               Principal
+Feb 15 21:59:38 2021  Feb 16 07:59:30 2021  krbtgt/42KL.EDU.MY@42KL.EDU.MY
