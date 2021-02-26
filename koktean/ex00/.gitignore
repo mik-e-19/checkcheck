@@ -1,0 +1,4 @@
+*.o
+*.bak
+a.out
+main.c
