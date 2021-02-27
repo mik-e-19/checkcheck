@@ -6,20 +6,17 @@
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/27 19:35:34 by mloh              #+#    #+#             */
-/*   Updated: 2021/02/27 19:36:00 by mloh             ###   ########.fr       */
+/*   Updated: 2021/02/27 20:13:27 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+int		ft_str_is_printable(char *str)
 {
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (*str)
 	{
-		if (str[i] < 32)
+		if (*str < 32 || *str == 127)
 			return (0);
-		++i;
+		str++;
 	}
 	return (1);
 }

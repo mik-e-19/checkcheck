@@ -6,7 +6,7 @@
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/27 19:43:26 by mloh              #+#    #+#             */
-/*   Updated: 2021/02/27 19:56:55 by mloh             ###   ########.fr       */
+/*   Updated: 2021/02/27 20:06:17 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_putstr_non_printable(char *str)
 
 	for (int i = 0; (c = str[i]); i++)
 	{
-		if (c > 31 && c < 127);
+		if (c > 31 && c < 127)
 			ft_putchar(c);
 		else
 		{
