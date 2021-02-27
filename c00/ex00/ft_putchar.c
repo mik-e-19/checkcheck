@@ -6,11 +6,11 @@
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/21 12:35:24 by mloh              #+#    #+#             */
-/*   Updated: 2021/02/21 12:37:31 by mloh             ###   ########.fr       */
+/*   Updated: 2021/02/27 10:50:08 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.io>
+#include <unistd.h>
 
 void	ft_putchar(char c)
 {

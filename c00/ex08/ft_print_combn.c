@@ -6,7 +6,7 @@
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 15:38:31 by mloh              #+#    #+#             */
-/*   Updated: 2021/02/26 09:51:14 by mloh             ###   ########.fr       */
+/*   Updated: 2021/02/27 10:49:39 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	up_dig(char *num, int pos, int size)
 	temp = num[pos - 1] + 1;
 	if (temp > '9' - size + pos && pos != 1)
 	{
-		update_digit(num, pos - 1, size);
+		up_dig(num, pos - 1, size);
 		temp = num[pos - 2] + 1;
 	}
 	num[pos - 1] = temp;
@@ -60,5 +60,5 @@ void	ft_print_combn(int n)
 		ft_putchar(' ');
 		up_dig(numln, n, n);
 	}
-	print(numlen, n);
+	print(numln, n);
 }

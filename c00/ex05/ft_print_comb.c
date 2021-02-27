@@ -6,7 +6,7 @@
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 23:57:37 by mloh              #+#    #+#             */
-/*   Updated: 2021/02/25 00:16:09 by mloh             ###   ########.fr       */
+/*   Updated: 2021/02/27 10:52:34 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ void	ft_putchar(char c)
 
 void	printnum(char c1, char c2, char c3)
 {
-	ft_putchar(i);
-	ft_putchar(j);
-	ft_putchar(k);
-	if ((i + j + k) != 168)
+	ft_putchar(c1);
+	ft_putchar(c2);
+	ft_putchar(c3);
+	if ((c1 + c2 + c3) != 168)
 	{
 		ft_putchar(',');
 		ft_putchar(' ');
