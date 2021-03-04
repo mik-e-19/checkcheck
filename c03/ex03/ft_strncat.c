@@ -6,24 +6,24 @@
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 17:53:57 by mloh              #+#    #+#             */
-/*   Updated: 2021/03/03 17:54:42 by mloh             ###   ########.fr       */
+/*   Updated: 2021/03/04 17:07:15 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int nb)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int i;
-	int j;
+	unsigned int i;
+	unsigned int j;
 
 	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
+	while (dest[i])
 		++i;
-	while (src[j] != '\0' && j < nb)
+	j = 0;
+	while (src[j] && j < nb)
 	{
 		dest[i + j] = src[j];
-		++j;
+		j++;
 	}
-	dest[i + j] = '\0';
+	dest[i + j] = 0;
 	return (dest);
 }
