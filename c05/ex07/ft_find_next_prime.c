@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/04 18:16:10 by mloh              #+#    #+#             */
-/*   Updated: 2021/03/04 18:26:14 by mloh             ###   ########.fr       */
+/*   Created: 2021/03/04 18:08:12 by mloh              #+#    #+#             */
+/*   Updated: 2021/03/04 18:08:56 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	print(char c)
+int	ft_is_prime(int nb)
 {
-	write(1, &c, 1);
+	int i;
+
+	if (nb <= 1)
+		return (0);
+	i = 2;
+	while (i * i < nb && i < 46341)
+	{
+		if (nb % i == 0)
+			return (0);
+		++i;
+	}
+	return (1);
 }
 
-int	main(int argc, char **argv)
+int	ft_find_next_prime(int nb)
 {
-	int	i;
-	int input;
-
-	input = argc;
-	i = 0;
-	while (argv[0][i])
-	{
-		print(argv[0][i]);
-		i++;
-	}
-	print('\n');
+	while (nb < 2147483647 && !ft_is_prime(nb))
+		++nb;
+	return (nb);
 }

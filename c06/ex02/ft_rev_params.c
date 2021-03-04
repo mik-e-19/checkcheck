@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gatan <gatan@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/03 15:21:42 by gatan             #+#    #+#             */
-/*   Updated: 2021/03/03 15:29:33 by gatan            ###   ########.fr       */
+/*   Created: 2021/03/04 18:27:08 by mloh              #+#    #+#             */
+/*   Updated: 2021/03/04 18:27:59 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void print(char c)
 {
 	write(1, &c, 1);
 }
 
-int		main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	int	i;
-	int	j;
+	int i;
+	int j;
 
 	i = argc - 1;
 	while (i > 0)
@@ -28,10 +28,10 @@ int		main(int argc, char **argv)
 		j = 0;
 		while (argv[i][j])
 		{
-			ft_putchar(argv[i][j]);
+			print(argv[i][j]);
 			j++;
 		}
-		ft_putchar('\n');
+		print('\n');
 		i--;
 	}
 }

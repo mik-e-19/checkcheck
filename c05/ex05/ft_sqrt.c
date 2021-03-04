@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/04 18:16:10 by mloh              #+#    #+#             */
-/*   Updated: 2021/03/04 18:26:14 by mloh             ###   ########.fr       */
+/*   Created: 2021/03/04 17:59:11 by mloh              #+#    #+#             */
+/*   Updated: 2021/03/04 18:03:18 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	print(char c)
+int	ft_sqrt(int nb)
 {
-	write(1, &c, 1);
-}
+	int i;
 
-int	main(int argc, char **argv)
-{
-	int	i;
-	int input;
-
-	input = argc;
-	i = 0;
-	while (argv[0][i])
+	i = 1;
+	if (nb > 0)
 	{
-		print(argv[0][i]);
-		i++;
+		while (i * i <= nb)
+		{
+			if (i * i == nb)
+				return (i);
+			else if (i >= 46341)
+				return (0);
+			++i;
+		}
 	}
-	print('\n');
+	return (0);
 }

@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/04 18:16:10 by mloh              #+#    #+#             */
-/*   Updated: 2021/03/04 18:26:14 by mloh             ###   ########.fr       */
+/*   Created: 2021/03/04 17:37:12 by mloh              #+#    #+#             */
+/*   Updated: 2021/03/04 17:56:02 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	print(char c)
+int	ft_iterative_factorial(int nb)
 {
-	write(1, &c, 1);
-}
+	int result;
 
-int	main(int argc, char **argv)
-{
-	int	i;
-	int input;
-
-	input = argc;
-	i = 0;
-	while (argv[0][i])
-	{
-		print(argv[0][i]);
-		i++;
-	}
-	print('\n');
+	result = 1;
+	if (nb < 0)
+		return (0);
+	while (nb > 0)
+		result *= nb--;
+	return (result);
 }

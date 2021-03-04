@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
+/*   By: gatan <gatan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/04 18:16:10 by mloh              #+#    #+#             */
-/*   Updated: 2021/03/04 18:26:14 by mloh             ###   ########.fr       */
+/*   Created: 2021/03/03 15:04:40 by gatan             #+#    #+#             */
+/*   Updated: 2021/03/03 15:11:49 by gatan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-int	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	int	i;
-	int input;
+	int arguments;
 
-	input = argc;
+	arguments = argc;
 	i = 0;
 	while (argv[0][i])
 	{
-		print(argv[0][i]);
+		ft_putchar(argv[0][i]);
 		i++;
 	}
-	print('\n');
+	ft_putchar('\n');
 }
