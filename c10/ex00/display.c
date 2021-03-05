@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   display.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/26 12:47:44 by mloh              #+#    #+#             */
-/*   Updated: 2021/02/26 21:58:48 by mloh             ###   ########.fr       */
+/*   Created: 2021/03/05 23:14:50 by mloh              #+#    #+#             */
+/*   Updated: 2021/03/05 23:15:27 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b)
-{
-	int div;
-	int mod;
+#include <unistd.h>
+#include <fcntl.h>
 
-	if (*b != 0)
+void	print_file(char const *name)
+{
+	int		fd;
+	char	buf[1];
+
+	fd = open(name, O_RDONLY);
+	while (read(fd, buf, sizeof(buf)))
 	{
-		div = (*a) / (*b);
-		mod = (*a) % (*b);
-		*a = div;
-		*b = mod;
+		write(1, buf, sizeof(buf));
 	}
+	close(fd);
+}
+
+int		main(int argc, char const *argv[])
+{
+	if (argc == 2)
+		print_file(argv[1]);
+	else if (argc < 2)
+		write(2, "File name missing.\n", 19);
+	else
+		write(2, "Too many arguments.\n", 20);
+	return (0);
 }

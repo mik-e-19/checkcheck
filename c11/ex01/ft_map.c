@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_map.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/26 12:47:44 by mloh              #+#    #+#             */
-/*   Updated: 2021/02/26 21:58:48 by mloh             ###   ########.fr       */
+/*   Created: 2021/03/05 23:19:40 by mloh              #+#    #+#             */
+/*   Updated: 2021/03/05 23:20:25 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b)
-{
-	int div;
-	int mod;
+#include <stdlib.h>
 
-	if (*b != 0)
+int		*ft_map(int *tab, int length, int (*f)(int))
+{
+	int *results;
+	int i;
+
+	i = 0;
+	results = (int *)malloc(length * sizeof(int));
+	while (i < length)
 	{
-		div = (*a) / (*b);
-		mod = (*a) % (*b);
-		*a = div;
-		*b = mod;
+		results[i] = (*f)(tab[i]);
+		++i;
 	}
+	return (results);
 }

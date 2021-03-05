@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/26 12:47:44 by mloh              #+#    #+#             */
-/*   Updated: 2021/02/26 21:58:48 by mloh             ###   ########.fr       */
+/*   Created: 2021/03/05 22:26:45 by mloh              #+#    #+#             */
+/*   Updated: 2021/03/05 22:27:35 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b)
-{
-	int div;
-	int mod;
+#ifndef FT_H
 
-	if (*b != 0)
-	{
-		div = (*a) / (*b);
-		mod = (*a) % (*b);
-		*a = div;
-		*b = mod;
-	}
-}
+# define FT_H
+
+void	ft_putchar(char c);
+void	ft_swap(int *a, int *b);
+void    ft_putstr(char *str);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
+
+#endif

@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/26 12:47:44 by mloh              #+#    #+#             */
-/*   Updated: 2021/02/26 21:58:48 by mloh             ###   ########.fr       */
+/*   Created: 2021/03/05 23:21:40 by mloh              #+#    #+#             */
+/*   Updated: 2021/03/05 23:21:54 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b)
+int	ft_count_if(char **tab, int (*f)(char*))
 {
-	int div;
-	int mod;
+	int i;
+	int n;
 
-	if (*b != 0)
+	i = 0;
+	n = 0;
+	while (tab[i])
 	{
-		div = (*a) / (*b);
-		mod = (*a) % (*b);
-		*a = div;
-		*b = mod;
+		n += ((*f)(tab[i]) == 1);
+		++i;
 	}
+	return (n);
 }

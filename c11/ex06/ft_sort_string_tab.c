@@ -1,25 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_sort_string_tab.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/26 12:47:44 by mloh              #+#    #+#             */
-/*   Updated: 2021/02/26 21:58:48 by mloh             ###   ########.fr       */
+/*   Created: 2021/03/05 23:24:24 by mloh              #+#    #+#             */
+/*   Updated: 2021/03/05 23:25:31 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b)
+int		ft_strcmp(char *s1, char *s2)
 {
-	int div;
-	int mod;
+	int i;
 
-	if (*b != 0)
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+		++i;
+	return (s1[i] - s2[i]);
+}
+
+void	ft_sort_string_tab(char **tab)
+{
+	int		i;
+	int		j;
+	char	*temp;
+
+	i = 0;
+	while (tab[i] != 0)
 	{
-		div = (*a) / (*b);
-		mod = (*a) % (*b);
-		*a = div;
-		*b = mod;
+		j = i + 1;
+		while (tab[j] != 0)
+		{
+			if (ft_strcmp(tab[i], tab[j]) > 0)
+			{
+				temp = tab[i];
+
+				tab[i] = tab[j];
+				tab[j] = temp;
+			}
+			++j;
+		}
+		++i;
 	}
 }
