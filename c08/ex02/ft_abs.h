@@ -6,13 +6,13 @@
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 22:29:39 by mloh              #+#    #+#             */
-/*   Updated: 2021/03/05 22:30:04 by mloh             ###   ########.fr       */
+/*   Updated: 2021/03/10 18:42:39 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 
 # define FT_ABS_H
-# define ABS(x) ((x) < 0 ? -x : x)
+# define ABS(x) (((x) < 0) ? (-1 * x) : x)
 
 #endif

@@ -5,100 +5,100 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/05 22:12:22 by mloh              #+#    #+#             */
-/*   Updated: 2021/03/05 22:22:53 by mloh             ###   ########.fr       */
+/*   Created: 2021/03/09 22:41:06 by mloh              #+#    #+#             */
+/*   Updated: 2021/03/09 22:42:46 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int g_len_from = 0;
-int g_len_to = 0;
-int g_neg;
+int		ft_strlen(char *str);
+int		ft_power(int n, int p);
+char	*ft_putnbr_base(int nbr, char *base, int is_neg);
 
-int		len(char *base)
+int		check_valid(char *base)
 {
 	int i;
 	int j;
 
 	i = 0;
-	while (base[i])
+	if (base[0] == '\0' || base[1] == '\0')
+		return (0);
+	while (base[i] != '\0')
 	{
 		j = i + 1;
-		while (base[j])
+		while (base[j] != '\0')
 		{
-			if (base[i] == base[j])
-				return (-1);
-			++j;
+			if (base[i] == base[j] || base[j] == '+' || base[j] == '-' ||
+					base[j] == ' ' || base[j] == '\t' || base[j] == '\n' ||
+					base[j] == '\v' || base[j] == '\f' || base[j] == '\r')
+				return (0);
+			j++;
 		}
-		if (base[i] == '+' || base[i] == '-' || base[i] < 32)
-			return (-1);
-		++i;
+		i++;
 	}
-	i = 0;
-	while (base[i])
-		++i;
-	return (i);
+	return (1);
 }
 
-int		base_to_int(char *nbr, char *base_from)
+char	*check_sign(char *str, int *is_neg)
+{
+	*is_neg = 1;
+	while (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			*is_neg *= -1;
+		str++;
+	}
+	return (str);
+}
+
+char	*ft_atoi(char *str, char *base, int *is_neg, int *size)
 {
 	int i;
 	int j;
-	int result;
+	int valid;
 
 	i = 0;
-	result = 0;
-	while (nbr[i])
+	while (*str == ' ' || *str == '\t' || *str == '\n' ||
+			*str == '\v' || *str == '\f' || *str == '\r')
+		str++;
+	str = check_sign(str, is_neg);
+	while (*str != '\0')
 	{
-		j = 0;
-		while (base_from[j] != nbr[i])
-			++j;
-		result = g_neg ? (result * g_len_from) - j : (result * g_len_from) + j;
-		++i;
+		j = -1;
+		valid = 0;
+		while (base[++j] != '\0')
+			if (*str == base[j])
+				valid = 1;
+		if (valid == 0)
+			break ;
+		str++;
+		i++;
 	}
-	return (result);
-}
-
-int		i_base(int nbr, char *base_to, int i, char **str)
-{
-	if (g_neg ? nbr > (-g_len_to) : nbr < g_len_to)
-	{
-		(*str)[i] = (char)malloc(sizeof(char));
-		(*str)[i] = g_neg ? base_to[(nbr % g_len_to) * -1] :
-			base_to[nbr % g_len_to];
-		return (i + 1);
-	}
-	else
-	{
-		i = i_base(nbr / g_len_to, base_to, i, str);
-		(*str)[i] = (char)malloc(sizeof(char));
-		(*str)[i] = g_neg ? base_to[(nbr % g_len_to) * -1] :
-			base_to[nbr % g_len_to];
-		return (i + 1);
-	}
+	*size = i;
+	return (str - i);
 }
 
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
-	int		n;
-	char	*str;
-	int		i;
+	long int	nb;
+	int			is_neg;
+	int			size;
+	int			ps;
+	int			n;
 
-	g_len_from = len(base_from);
-	g_len_to = len(base_to);
-	g_neg = 0;
-	if (nbr[0] && (nbr[0] == '-' || nbr[0] == '+'))
+	nb = 0;
+	ps = 0;
+	nbr = ft_atoi(nbr, base_from, &is_neg, &size);
+	if (check_valid(base_from) == 0 || check_valid(base_to) == 0)
+		return (NULL);
+	while (ps < size)
 	{
-		if (nbr[0] == '-')
-			g_neg = 1;
-		++nbr;
+		n = 0;
+		while (base_from[n] != nbr[ps])
+			n++;
+		nb += n * ft_power(ft_strlen(base_from), (size - ps - 1));
+		ps+;
 	}
-	n = base_to_int(nbr, base_from);
-	str = (char *)malloc(sizeof(char *));
-	i = i_base(n, base_to, g_neg, &str);
-	if (g_neg)
-		str[0] = '-';
-	str[i] = '\0';
-	return (str);
+		return (ft_putnbr_base(nb, base_to, is_neg));
 }

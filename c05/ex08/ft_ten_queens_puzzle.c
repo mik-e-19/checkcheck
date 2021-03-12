@@ -6,7 +6,7 @@
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 22:13:12 by mloh              #+#    #+#             */
-/*   Updated: 2021/03/09 22:15:12 by mloh             ###   ########.fr       */
+/*   Updated: 2021/03/09 22:26:20 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,54 +17,54 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-int		ft_ten_queens_puzzle_test(int table[10], int x, int y)
+int		ft_10queens_test(int board[10], int x, int y)
 {
 	int i;
 
 	i = -1;
 	while (++i < x)
-		if (y == table[i] ||
-				i + table[i] == x + y ||
-				i - table[i] == x - y)
+		if (y == board[i] ||
+				i + board[i] == x + y ||
+				i - board[i] == x - y)
 			return (0);
 	return (1);
 }
 
-void	ft_ten_queens_puzzle_recur(int table[10], int *res, int pos)
+void	ft_10queens_loop(int board[10], int *res, int pos)
 {
 	int i;
-	int i2;
+	int j;
 
 	if (pos == 10)
 	{
 		*res += 1;
-		i2 = -1;
-		while (++i2 < 10)
-			ft_putchar(table[i2] + '0');
+		j = -1;
+		while (++j < 10)
+			ft_putchar(board[j] + '0');
 		ft_putchar('\n');
 	}
 	else
 	{
 		i = -1;
 		while (++i < 10)
-			if (ft_ten_queens_puzzle_test(table, pos, i))
+			if (ft_10queens_test(board, pos, i))
 			{
-				table[pos] = i;
-				ft_ten_queens_puzzle_recur(table, res, pos + 1);
+				board[pos] = i;
+				ft_10queens_loop(board, res, pos + 1);
 			}
 	}
 }
 
 int		ft_ten_queens_puzzle(void)
 {
-	int		table[10];
+	int		board[10];
 	int		i;
 	int		res;
 
 	i = -1;
 	while (++i < 10)
-		table[i] = -1;
+		board[i] = -1;
 	res = 0;
-	ft_ten_queens_puzzle_recur(table, &res, 0);
+	ft_10queens_loop(board, &res, 0);
 	return (res);
 }

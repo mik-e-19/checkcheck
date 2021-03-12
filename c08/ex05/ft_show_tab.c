@@ -6,13 +6,17 @@
 /*   By: mloh <mloh@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 22:40:21 by mloh              #+#    #+#             */
-/*   Updated: 2021/03/05 22:42:02 by mloh             ###   ########.fr       */
+/*   Updated: 2021/03/10 19:02:26 by mloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stock_par.h"
+#include <unistd.h>
+#include "ft_stock_str.h"
 
-void	ft_putchar(char c);
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 void	ft_putnbr(int nb)
 {
@@ -41,25 +45,19 @@ void	ft_putstr(char *str)
 		ft_putchar(*str++);
 }
 
-void	ft_show_tab(struct s_stock_par *par)
+void	ft_show_tab(struct s_stock_str *par)
 {
 	int i;
-	int j;
 
 	i = 0;
 	while (par[i].str != NULL)
 	{
 		ft_putstr(par[i].copy);
 		ft_putchar('\n');
-		ft_putnbr(par[i].size_param);
+		ft_putnbr(par[i].size);
 		ft_putchar('\n');
-		j = 0;
-		while (par[i].tab[j])
-		{
-			ft_putstr(par[i].tab[j]);
-			ft_putchar('\n');
-			++j;
-		}
+		ft_putstr(par[i].str);
+		ft_putchar('\n');
 		++i;
 	}
 }
