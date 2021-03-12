@@ -1,0 +1,14 @@
+Assignment name  : ft_print_numbers
+Expected files   : ft_print_numbers.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escriba una función que muestre todos los dígitos en orden creciente.
+
+El prototipo de la función deberá ser el siguiente:
+
+void	ft_print_numbers(void);
+
+Ejemplo:
+$> ./ft_print_numbers | cat -e
+0123456789$>

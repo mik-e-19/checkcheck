@@ -1,0 +1,27 @@
+Assignment name  : infin_mult
+Expected files   : *.c, *.h
+Allowed functions: write, malloc, free
+--------------------------------------------------------------------------------
+
+Escriba un programa que reciba como parámetros dos cadenas de caracteres
+que representen números con longitudes potencialmente infinitas y muestre en la
+salida estándar el resultado de la multiplicación de esos dos números, seguido
+de un '\n'.
+
+Los números negativos irán precedidos por un único signo -. Los únicos
+caracteres que podrán estar en esas cadenas son los dígitos y el signo -.
+
+Los parámetros estarán todos bien formateados y siempre habrá exactamente dos
+parámetros. No hay trampas.
+
+Ejemplo:
+
+$> ./infin_mult "879879087" "67548976597" | cat -e
+59434931855952726939$
+$> ./infin_mult "-876435" "987143265" | cat -e
+-865166907460275$
+$> ./infin_mult "-807965" "-34532" | cat -e
+27900647380$
+$> ./infin_mult "-807965" "0"
+0
+$>

@@ -1,0 +1,28 @@
+Assignment name  : sort_list
+Expected files   : sort_list.c
+Allowed functions: 
+--------------------------------------------------------------------------------
+
+다음 함수를 작성하십시오.
+
+t_list  *sort_list(t_list* lst, int (*cmp)(int, int));
+
+이 함수는 매개변수로 받은 리스트를 함수 포인터 cmp를 사용하여 정렬시킨 후, 정렬된 리스트의
+첫번째 노드의 주소를 반환합니다.
+
+중복된 데이터는 그대로 둡니다.
+
+Input은 항상 유효합니다.
+
+list.h에 정의되어 있는 t_list 구조체를 사용해야 합니다. list.h는 꼭 include
+해야하고(#include "list.h") 헤더파일은 제출하지 마세요. 평가 프로그램이 과제물을 평가할때
+자체의 list.h를 사용합니다.
+
+함수로 전달되는 cmp는 a와 b의 순서가 맞는 경우 0이외의 값을 반환하고 그 외에는 0을 반환합니다.
+
+예를 들어, 아래의 함수가 cmp일 경우, 리스트를 올림차순으로 정렬합니다.
+
+int ascending(int a, int b)
+{
+    return (a <= b);
+}

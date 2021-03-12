@@ -1,0 +1,56 @@
+Assignment name  : buzzfizz
+Expected files   : buzzfizz.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escribir un programa que escriba los números de 1 a 100 en la salida estándar, separados todos por un salto de línea.
+
+Si el número es múltiplo de 4, el programa debe escribir ‘buzz’ en su lugar.
+
+Si el número es múltiplo de 7, el programa debe escribir ‘fizz’ en su lugar.
+
+Si el número es múltiplo de 4 y de 7, el programa debe escribir ‘buzzfizz’ en su lugar.
+
+
+Ejemplo:
+
+$>./buzzfizz
+1
+2
+3
+buzz
+5
+6
+fizz
+buzz
+9
+10
+11
+buzz
+13
+fizz
+15
+buzz
+17
+18
+19
+buzz
+fizz
+22
+23
+buzz
+25
+26
+27
+buzzfizz
+29
+30
+[...]
+94
+95
+buzz
+97
+fizz
+99
+buzz
+$> 

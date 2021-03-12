@@ -1,0 +1,29 @@
+Assignment name  : str_maxlenoc
+Expected files   : str_maxlenoc.c
+Allowed functions: write, malloc, free
+--------------------------------------------------------------------------------
+
+Escriba un programa que reciba como parámetros n cadenas de caracteres y que
+muestre, seguida de un salto de línea, la mayor cadena de caracteres
+incluida en todas las cadenas pasadas como parámetros. Si hay varias cadenas
+iguales, se mostrará la que aparezca la primera en el primer parámetro.
+Tenga en cuenta que "" está obligatoriamente incluido en todas las cadenas.
+
+Si no se transmite ningún parámetro, el programa debe mostrar
+'\n'.
+
+Sean A y B cadenas de caracteres. Decimos que A
+está incluida en B si A es una subcadena de B o
+si A y B son idénticas.
+
+Ejemplos:
+$>./str_maxlenoc ab bac abacabccabcb
+a
+$>./str_maxlenoc hola buenas hola hola
+a
+$>./str_maxlenoc xoxAoxo xoxAox  oxAox oxo  A ooxAoxx oxooxo Axo | cat -e
+$
+$>./str_maxlenoc bosdsdfnjodur atehhellosd afkuonjosurafg headfgllosf fghellosag afdfbosnjourafg
+os
+$>./str_maxlenoc | cat -e
+$

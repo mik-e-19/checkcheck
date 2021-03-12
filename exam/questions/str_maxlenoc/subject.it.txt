@@ -1,0 +1,24 @@
+Nome esercizio		: str_maxlenoc
+File da consegnare	: str_maxlenoc.c
+Funzioni consentite	: write, malloc, free
+--------------------------------------------------------------------------------
+
+Scrivi un programma che prenda una o più stringhe e visualizzi, seguita da
+una nuova riga, la stringa più lunga che compare in tutti i parametri. 
+Se più di una stringa si qualifica, visualizzerà quella che compare per prima
+nel primo parametro. Tecnicamente le stringhe vuote compaiono in qualsiasi stringa.
+
+Se non vi sono parametri, il programma visualizzerà \n.
+
+Esempi:
+
+$>./str_maxlenoc ab bac abacabccabcb
+a
+$>./str_maxlenoc bonjour salut bonjour bonjour
+u
+$>./str_maxlenoc xoxAoxo xoxAox  oxAox oxo  A ooxAoxx oxooxo Axo | cat -e
+$
+$>./str_maxlenoc bosdsdfnjodur atehhellosd afkuonjosurafg headfgllosf fghellosag afdfbosnjourafg
+os
+$>./str_maxlenoc | cat -e
+$

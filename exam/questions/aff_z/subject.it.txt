@@ -1,0 +1,19 @@
+Nome esercizio		: aff_z
+File da consegnare	: aff_z.c
+Funzioni consentite	: write
+--------------------------------------------------------------------------------
+
+Scrivi un programma che prenda una stringa e visualizzi il primo carattere 'z' 
+che vi incontra, seguito da una nuova riga. Se non ci sono caratteri 'z' nella
+stringa, il programma visualizzerà 'z', seguito da una nuova riga. Se il numero di parametri non è 1, il programma visualizzerà 'z' seguito da una nuova riga.
+
+Esempio:
+
+$> ./aff_z "abc" | cat -e
+z$
+$> ./aff_z 'RaInB0w d4Sh!' | cat -e
+z$
+$> ./aff_z 'ThE C4k3 Is a L|3' | cat -e
+z$
+$> ./aff_z | cat -e
+z$

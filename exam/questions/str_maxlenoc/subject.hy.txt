@@ -1,0 +1,24 @@
+Առաջադրանքի անունը՝ str_maxlenoc
+Ակնկալվող ֆայլեր՝ str_maxlenoc.c
+Թույլատրված ֆունկցիաներ՝ write, malloc, free
+
+Գրել ծրագիր, որը վերցնում է մեկ կամ մի քանի տողեր ու արտածում է յուրաքանչյուր
+պարամետրի ամենաերկար տողը՝ հաջորդված նոր տողով։ Եթե կան մի քանի հավասար երկարության
+տողեր, ծրագիրը պետք է արտածի այն տողը, որն առաջինն է հայտնվում առաջին պարամետրում։
+Հաշվի առնել, որ ամեն տողում պարտադիր առկա է դատարկ տողը։
+
+Եթե պարամետրեր չկան, ծրագիրը պետք է արտածի \n։
+
+
+Օրինակներ՝
+
+$>./str_maxlenoc ab bac abacabccabcb
+a
+$>./str_maxlenoc bonjour salut bonjour bonjour
+u
+$>./str_maxlenoc xoxAoxo xoxAox  oxAox oxo  A ooxAoxx oxooxo Axo | cat -e
+$
+$>./str_maxlenoc bosdsdfnjodur atehhellosd afkuonjosurafg headfgllosf fghellosag afdfbosnjourafg
+os
+$>./str_maxlenoc | cat -e
+$

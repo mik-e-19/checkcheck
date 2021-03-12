@@ -1,0 +1,14 @@
+Assignment name  : ft_print_numbers
+Expected files   : ft_print_numbers.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Escreva uma função que exiba todos os números em ordem crescente.
+
+Ela deverá ser prototipada da seguinte forma:
+
+void	ft_print_numbers(void);
+
+Examplo:
+$> ./ft_print_numbers | cat -e
+0123456789$>

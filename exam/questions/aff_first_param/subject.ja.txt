@@ -1,0 +1,18 @@
+課題名            : aff_first_param
+提出ファイル       : aff_first_param.c
+使用可能な関数      : write
+--------------------------------------------------------------------------------
+
+文字列をコマンドライン引数として受け取り、最初のコマンドライン引数だけと改行を標準出力に出力
+するプログラムを書きなさい。
+
+もしコマンドライン引数の数が1つ未満の場合、改行だけを標準出力に出力するプログラムとなります。
+
+例）
+
+$> ./aff_first_param it is at this moment jackson knew | cat -e
+it$
+$> ./aff_first_param "I bet you can't print me" | cat -e
+I bet you can't print me$
+$> ./aff_first_param | cat -e
+$

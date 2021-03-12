@@ -1,0 +1,18 @@
+Assignment name  : aff_first_param
+Expected files   : aff_first_param.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+문자열을 인자로 받고 그 중 첫번째 인자를 표준출력으로 출력하는
+프로그램을 작성하시오. 단, 마지막에 '\n'도 출력되어야 합니다.
+
+이 프로그램은 인자의 개수가 1개 미만이라면, '\n'을 출력합니다. 
+
+Example:
+
+$> ./aff_first_param it is at this moment jackson knew | cat -e
+it$
+$> ./aff_first_param "I bet you can't print me" | cat -e
+I bet you can't print me$
+$> ./aff_first_param | cat -e
+$

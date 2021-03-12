@@ -1,0 +1,26 @@
+Nome esercizio		: infin_mult
+File da consegnare	: *.c, *.h
+Funzioni consentite	: write, malloc, free
+--------------------------------------------------------------------------------
+
+Scrivi un programma che prenda come parametro due stringhe che rappresentino due
+numeri potenzialmente infiniti, e visualizzi su stdout il risultato della 
+moltiplicazione tra i due, seguito da un '\n'.
+
+Un numero negativo sarà sempre prefissato da uno ed un solo -. Gli unici
+caratteri che possono far parte delle stringhe sono cifre ed il segno -.
+
+Entrambi i parametri saranno sempre ben formattati ed avrai sempre due parametri,
+nessun trucco.
+
+Esempio:
+
+$> ./infin_mult "879879087" "67548976597" | cat -e
+59434931855952726939$
+$> ./infin_mult "-876435" "987143265" | cat -e
+-865166907460275$
+$> ./infin_mult "-807965" "-34532" | cat -e
+27900647380$
+$> ./infin_mult "-807965" "0"
+0
+$>

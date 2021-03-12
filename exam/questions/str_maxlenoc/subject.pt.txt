@@ -1,0 +1,29 @@
+Assignment name  : str_maxlenoc
+Expected files   : str_maxlenoc.c
+Allowed functions: write, malloc, free
+--------------------------------------------------------------------------------
+
+Escreva um programa que tenha como parâmetro n cadeias de caracteres e que
+mostre, seguida de uma quebra de linha, a maior cadeia de caracteres
+incluída em todas as cadeias passadas como parâmetros. Se várias cadeias
+coincidirem, deve-se mostrar aquela que aparecer primeiro no primeiro
+parâmetro. Note que "" tem que estar em todas as cadeias.
+
+Se nenhum parâmetro for transmitido, o programa deve mostrar
+'\n'.
+
+Vamos considerar A e B cadeias de caracteres. A
+está incluída em B se A for uma subcadeia de B ou
+se A e B forem idênticas.
+
+Exemplos:
+$>./str_maxlenoc ab bac abacabccabcb
+a
+$>./str_maxlenoc bonjour salut bonjour bonjour
+u
+$>./str_maxlenoc xoxAoxo xoxAox  oxAox oxo  A ooxAoxx oxooxo Axo | cat -e
+$
+$>./str_maxlenoc bosdsdfnjodur atehhellosd afkuonjosurafg headfgllosf fghellosag afdfbosnjourafg
+os
+$>./str_maxlenoc | cat -e
+$

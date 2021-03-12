@@ -1,0 +1,23 @@
+Assignment name  : str_maxlenoc
+Expected files   : str_maxlenoc.c
+Allowed functions: write, malloc, free
+--------------------------------------------------------------------------------
+
+1개 이상의 문자열을 인자로 받아, 모든 문자열에서 공통적으로 나타는 가장 긴 문자열을 표준출력에 출력하는
+프로그램을 작성하십시오. 만약 가장 긴 문자열이 두개 이상인 경우, 첫번째 인자에서 첫번째로 발견된 문자열을
+출력합니다. 빈 문자열은 어느 문자열에나 다 포함 됩니다.
+
+받은 인자가 없는 경우, 프로그램은 줄바꿈 문자를 출력합니다.
+
+Examples:
+
+$>./str_maxlenoc ab bac abacabccabcb
+a
+$>./str_maxlenoc bonjour salut bonjour bonjour
+u
+$>./str_maxlenoc xoxAoxo xoxAox  oxAox oxo  A ooxAoxx oxooxo Axo | cat -e
+$
+$>./str_maxlenoc bosdsdfnjodur atehhellosd afkuonjosurafg headfgllosf fghellosag afdfbosnjourafg
+os
+$>./str_maxlenoc | cat -e
+$

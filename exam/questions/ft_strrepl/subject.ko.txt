@@ -1,0 +1,12 @@
+Assignment name  : ft_strrepl
+Expected files   : ft_strrepl.c
+Allowed functions: 
+--------------------------------------------------------------------------------
+
+문자열을 수정하여 그 문자열 안에 있는 문자 c1을 문자 c2로 바꾸는 함수를 작성하시오.
+
+이 함수는 str을 반환해야 합니다.
+
+함수는 아래와 같이 선언되어야 합니다:
+
+char    *ft_strrepl(char *str, char c1, char c2);

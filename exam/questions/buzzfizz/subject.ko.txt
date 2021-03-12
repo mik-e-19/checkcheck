@@ -1,0 +1,55 @@
+Assignment name  : buzzfizz
+Expected files   : buzzfizz.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+1에서 100까지의 각 숫자를 줄바꿈 문자와 함께 출력하는 프로그램을 작성하십시오.
+
+숫자가 4의 배수이면 대신 'buzz'를 출력합니다.
+
+숫자가 7의 배수이면 대신 'fizz'를 출력합니다.
+
+숫자가 4와 7의 배수인 경우 'buzzfizz'를 출력합니다.
+
+Example:
+
+$>./buzzfizz
+1
+2
+3
+buzz
+5
+6
+fizz
+buzz
+9
+10
+11
+buzz
+13
+fizz
+15
+buzz
+17
+18
+19
+buzz
+fizz
+22
+23
+buzz
+25
+26
+27
+buzzfizz
+29
+30
+[...]
+94
+95
+buzz
+97
+fizz
+99
+buzz
+$>

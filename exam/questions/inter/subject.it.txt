@@ -1,0 +1,21 @@
+Nome esercizio		: inter
+File da consegnare	: inter.c
+Funzioni consentite	: write
+--------------------------------------------------------------------------------
+
+Scrivi un programma che prenda due stringhe e visualizzi, senza ripetizioni, i caratteri che compaiono in entrambe le stringhe, nell'ordine in cui appaiono nella prima.
+
+La stampa sarà seguita da un \n.
+
+Se il numero degli argomenti non è 2, il programma visualizza \n.
+
+Esempi:
+
+$>./inter "padinton" "paqefwtdjetyiytjneytjoeyjnejeyj" | cat -e
+padinto$
+$>./inter ddf6vewg64f gtwthgdwthdwfteewhrtag6h4ffdhsd | cat -e
+df6ewg4$
+$>./inter "nothing" "This sentence hides nothing" | cat -e
+nothig$
+$>./inter | cat -e
+$

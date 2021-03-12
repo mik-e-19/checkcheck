@@ -1,0 +1,28 @@
+Assignment name  : infin_mult
+Expected files   : *.c, *.h
+Allowed functions: write, malloc, free
+--------------------------------------------------------------------------------
+
+Escreva um programa que tenha como parâmetro duas cadeias de caracteres
+que representem os números de comprimento potencialmente infinito, e mostre na
+saída standard o resultado da multiplicação desse dois números, seguido
+de um '\n'.
+
+Um número negativo deve ser precedido por apenas um sinal -. Os únicos
+caracteres que potencialmente farão parte dessas cadeias são os algarismos
+e o sinal -.
+
+Todos os parâmetros deverão estar bem formatados, e sempre haverá exatamente dois
+parâmetros, nada de truques.
+
+Exemplo:
+
+$> ./infin_mult "879879087" "67548976597" | cat -e
+59434931855952726939$
+$> ./infin_mult "-876435" "987143265" | cat -e
+-865166907460275$
+$> ./infin_mult "-807965" "-34532" | cat -e
+27900647380$
+$> ./infin_mult "-807965" "0"
+0
+$>

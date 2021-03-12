@@ -1,0 +1,25 @@
+Nome esercizio		: count_alpha
+File da consegnare	: count_alpha.c
+Funzioni consentite	: write, printf
+--------------------------------------------------------------------------------
+
+Scrivi un programma chiamato count_alpha che prenda una stringa e visualizzi il
+numero di occorrenze dei suoi caratteri alfabetici. Gli altri caratteri non vengono
+presi in considerazione. L'ordine da rispettare è quello di occorrenza nella stringa.
+La stampa deve terminare con una nuova riga.
+
+Il formato è nell'esempio.
+
+Se il numero degli argomenti non è 1, visualizzerà solo una nuova riga.
+
+Esempi :
+$> ./count_alpha abbcc
+1a, 2b, 2c
+$> ./count_alpha "abbcc"
+1a, 2b, 2c
+$> ./count_alpha "abbcc" "dddeef" | cat -e
+$
+$> ./count_alpha "My Hyze 47y 7." | cat -e
+1m, 3y, 1h, 1z, 1e$
+$> ./count_alpha "" | cat -e
+$

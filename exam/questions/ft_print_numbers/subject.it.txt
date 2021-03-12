@@ -1,0 +1,15 @@
+Nome esercizio  : ft_print_numbers
+File da consegnare   : ft_print_numbers.c
+Funzioni consentite: write
+--------------------------------------------------------------------------------
+
+Scrivi una funzione che visualizzi tutte le cifre in ordine crescente.
+
+La tua funzione deve essere dichiarata come segue:
+
+
+void	ft_print_numbers(void);
+
+Esempio:
+$> ./ft_print_numbers | cat -e
+0123456789$>

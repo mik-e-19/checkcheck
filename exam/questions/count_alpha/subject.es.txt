@@ -1,0 +1,24 @@
+Assignment name  : count_alpha
+Expected files   : count_alpha.c
+Allowed functions: write, printf
+--------------------------------------------------------------------------------
+
+Escriba un programa count_alpha que reciba una cadena y muestre el número de veces que aparecen
+sus caracteres alfabéticos. No se contarán los demás caracteres. El orden es el orden de aparición dentro de la cadena.
+La visualización se debe terminar con un salto de línea.
+
+El formato está en los ejemplos.
+
+Si el número de argumentos no es 1, mostrar solo un salto de línea.
+
+Ejemplos:
+$> ./count_alpha abbcc
+1a, 2b, 2c
+$> ./count_alpha "abbcc"
+1a, 2b, 2c
+$> ./count_alpha "abbcc" "dddeef" | cat -e
+$
+$> ./count_alpha "My Hyze 47y 7." | cat -e
+1m, 3y, 1h, 1z, 1e$
+$> ./count_alpha "" | cat -e
+$

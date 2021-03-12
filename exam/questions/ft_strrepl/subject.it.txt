@@ -1,0 +1,13 @@
+Nome esercizio		: ft_strrepl
+File da consegnare	: ft_strrepl.c
+Funzioni consentite	: 
+--------------------------------------------------------------------------------
+
+Scrivi una funzione che rimpiazzi i caratteri c1 con il carattere c2 dentro str andando
+a modificarla.
+
+Deve restituire str.
+
+La tua funzione deve essere dichiarata come segue:
+
+char    *ft_strrepl(char *str, char c1, char c2);

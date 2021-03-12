@@ -1,0 +1,57 @@
+Assignment name  : buzzfizz
+Expected files   : buzzfizz.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Ecrire un programme qui écrit une suite de nombres de 1 à 100 sur la sortie 
+standard, tous séparés par une newline. 
+
+Si le nombre est un multiple de 4, le programme doit écrire 'buzz' à la place.
+
+Si le nombre est un multiple de 7, le programme doit écrire 'fizz' à la place.
+
+Si le nombre est un multiple de 4 et un multiple de 7, le programme doit écrire 
+'buzzfizz' à la place.
+
+Exemple:
+
+$>./buzzfizz
+1
+2
+3
+buzz
+5
+6
+fizz
+buzz
+9
+10
+11
+buzz
+13
+fizz
+15
+buzz
+17
+18
+19
+buzz
+fizz
+22
+23
+buzz
+25
+26
+27
+buzzfizz
+29
+30
+[...]
+94
+95
+buzz
+97
+fizz
+99
+buzz
+$> 
